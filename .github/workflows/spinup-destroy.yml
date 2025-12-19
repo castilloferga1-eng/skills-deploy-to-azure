@@ -8,8 +8,8 @@ env:
   IMAGE_REGISTRY_URL: ghcr.io
   AZURE_RESOURCE_GROUP: cd-with-actions
   AZURE_APP_PLAN: actions-ttt-deployment
-  # Región actualizada
-  AZURE_LOCATION: '"west US 3"'
+  # Región actualizada según tu lista permitida
+  AZURE_LOCATION: "centralus"
   # Usuario actualizado
   AZURE_WEBAPP_NAME: castilloferga1-eng-ttt-app
 
@@ -43,7 +43,7 @@ jobs:
 
       - name: Configure webapp to use GHCR
         if: success()
-        # Se han actualizado los flags a la sintaxis estándar de container
+        # Se cambió la sintaxis de --docker por --container
         run: |
           az webapp config container set \
             --name ${{ env.AZURE_WEBAPP_NAME }} \
