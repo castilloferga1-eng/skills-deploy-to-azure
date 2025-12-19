@@ -9,7 +9,7 @@ env:
   AZURE_RESOURCE_GROUP: cd-with-actions
   AZURE_APP_PLAN: actions-ttt-deployment
   # Región actualizada
-  AZURE_LOCATION: "west US 3"
+  AZURE_LOCATION: '"west US 3"'
   # Usuario actualizado
   AZURE_WEBAPP_NAME: castilloferga1-eng-ttt-app
 
